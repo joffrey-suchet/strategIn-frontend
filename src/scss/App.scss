@@ -1,0 +1,133 @@
+* {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  //   background-color: rgb(9, 116, 166);
+  background-color: rgb(4, 51, 73);
+
+  color: white;
+
+  h1 {
+    font-size: 2rem;
+    margin: 1rem;
+    font-weight: 600;
+  }
+
+  .container {
+    width: 40%;
+    height: 15rem;
+    border: solid rgb(17, 30, 84) 2px;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 15vh auto;
+    background-color: rgba(186, 186, 186, 0.479);
+
+    .connexion {
+      display: flex;
+      margin: 5rem;
+      justify-content: space-around;
+
+      .button {
+        height: 2.5rem;
+        width: 30%;
+        border: solid rgb(172, 172, 172) 1px;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(17, 30, 84);
+        transition: 0.3s;
+      }
+
+      .button:hover {
+        background-color: rgb(32, 57, 139);
+        cursor: pointer;
+        border: solid white 1px;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .form {
+    margin: 15vh;
+    width: 30%;
+    border: solid rgb(26, 79, 149) 2px;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 15vh auto;
+    background-color: rgba(186, 186, 186, 0.479);
+    display: flex;
+    flex-direction: column;
+
+    .ligne {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid rgb(17, 30, 84) 2px;
+      margin: 1rem;
+      padding-bottom: 0.5rem;
+      p {
+        width: 35%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-bottom: 0.2rem;
+      }
+      input {
+        width: 50%;
+        height: 1.8rem;
+        background-color: rgb(217, 230, 234);
+        border: solid black 1px;
+        border-radius: 1rem;
+        color: black;
+        padding: 0 0.7rem;
+      }
+
+      .error {
+        height: 2rem;
+        color: red;
+      }
+    }
+
+    .valider {
+      width: 40%;
+      height: 2rem;
+      margin: 1rem auto;
+      border-radius: 1rem;
+      border: solid rgb(17, 30, 84) 2px;
+      background-color: rgb(32, 32, 107);
+    }
+    .valider:hover {
+      border: solid rgb(172, 181, 224) 2px;
+      background-color: rgb(73, 117, 230);
+    }
+  }
+
+  .liste {
+    margin: 5rem auto;
+    width: 30rem;
+    border: solid rgb(17, 30, 84) 2px;
+    border-radius: 1rem;
+    background-color: rgba(186, 186, 186, 0.479);
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .user {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 2rem;
+      border-bottom: solid grey 2px;
+      padding-bottom: 0.5rem;
+
+      p {
+        width: 45%;
+      }
+    }
+  }
+}
