@@ -19,7 +19,6 @@ const Register = () => {
 
       //je verifie que le mot de passe soit renseigné et identique a sa confirmation
       if (password && password === confirmPassword) {
-        console.log("if password");
         const response = await axios.post(
           "https://strategin-backend.herokuapp.com/register",
           {
