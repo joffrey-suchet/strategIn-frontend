@@ -10,7 +10,6 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [user, setUser] = useState("");
 
   // fonction pour creer un compte
   const handleSignup = async (event) => {
@@ -31,7 +30,6 @@ const Register = () => {
         );
         if (response.data) {
           console.log("J'ai reussi à créer un compte !");
-          setUser(response.data.token);
           alert("compte créer");
           // redirection vers la page home
           navigate("/");
