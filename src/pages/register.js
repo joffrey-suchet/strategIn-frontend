@@ -21,11 +21,14 @@ const Register = () => {
       //je verifie que le mot de passe soit renseigné et identique a sa confirmation
       if (password && password === confirmPassword) {
         console.log("if password");
-        const response = await axios.post("http://localhost:3002/register", {
-          email: email,
-          name: name,
-          password: password,
-        });
+        const response = await axios.post(
+          "https://strategin-backend.herokuapp.com/register",
+          {
+            email: email,
+            name: name,
+            password: password,
+          }
+        );
         if (response.data) {
           console.log("J'ai reussi à créer un compte !");
           setUser(response.data.token);
@@ -44,7 +47,7 @@ const Register = () => {
   return (
     <form className="form" onSubmit={handleSignup}>
       <h1>Créer votre compte</h1>
-      <div className="ligne">
+      <div className="line">
         <p>Votre prénom</p>{" "}
         <input
           type="text"
@@ -53,7 +56,7 @@ const Register = () => {
           placeholder="david"
         />
       </div>
-      <div className="ligne">
+      <div className="line">
         <p>Votre email</p>
         <input
           type="email"
@@ -62,7 +65,7 @@ const Register = () => {
           placeholder="david@mail.com"
         />
       </div>
-      <div className="ligne">
+      <div className="line">
         <p>Votre mot de passe</p>
         <input
           type="password"
@@ -71,7 +74,7 @@ const Register = () => {
           placeholder="******"
         />
       </div>
-      <div className="ligne">
+      <div className="line">
         <p>Confirmer votre mot de passe</p>{" "}
         <input
           type="password"
@@ -80,7 +83,7 @@ const Register = () => {
           placeholder="******"
         />
       </div>
-      <input className="valider" type="submit" value="S'inscrire" />
+      <input className="validation" type="submit" value="S'inscrire" />
       <p className="error">{errorMessage}</p>
     </form>
   );

@@ -9,7 +9,9 @@ const Users = () => {
   useEffect(() => {
     try {
       const fetchData = async () => {
-        const response = await axios.get("http://localhost:3002/users");
+        const response = await axios.get(
+          "https://strategin-backend.herokuapp.com/users"
+        );
 
         setData(response.data);
         console.log(response.data);
@@ -25,7 +27,7 @@ const Users = () => {
       <h1>Chargement des données</h1>
     </div>
   ) : (
-    <div className="liste">
+    <div className="listing">
       <h1>Liste des Utilisateurs</h1>
       <div>
         {data.map((user, index) => {

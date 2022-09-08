@@ -16,16 +16,19 @@ const Login = () => {
     setErrorMessage("");
     try {
       if (email && password) {
-        const response = await axios.post("http://localhost:3002/login", {
-          email: email,
-          password: password,
-        });
+        const response = await axios.post(
+          "https://strategin-backend.herokuapp.com/login",
+          {
+            email: email,
+            password: password,
+          }
+        );
         if (response.data.token) {
           Cookies.set("userToken", response.data.token);
           navigate("/users");
         }
       } else {
-        setErrorMessage("Email ou mot de passe oublier");
+        setErrorMessage("veuillez remplir les champs libres");
       }
     } catch (error) {
       console.log("catch from handLogin ==>", error);
@@ -36,7 +39,7 @@ const Login = () => {
   return (
     <form className="form" onSubmit={handleLogin}>
       <h1>Connectez vous</h1>
-      <div className="ligne">
+      <div className="line">
         <p>Votre email</p>
         <input
           type="email"
@@ -45,7 +48,7 @@ const Login = () => {
           placeholder="david@mail.com"
         />
       </div>
-      <div className="ligne">
+      <div className="line">
         <p>Votre mot de passe</p>
         <input
           type="password"
@@ -55,7 +58,7 @@ const Login = () => {
         />
       </div>
 
-      <input className="valider" type="submit" value="Se connecter" />
+      <input className="validation" type="submit" value="Se connecter" />
       <p className="error">{errorMessage}</p>
     </form>
   );

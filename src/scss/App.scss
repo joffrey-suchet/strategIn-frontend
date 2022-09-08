@@ -63,7 +63,7 @@ html {
     display: flex;
     flex-direction: column;
 
-    .ligne {
+    .line {
       display: flex;
       justify-content: space-between;
       border-bottom: solid rgb(17, 30, 84) 2px;
@@ -92,7 +92,7 @@ html {
       }
     }
 
-    .valider {
+    .validation {
       width: 40%;
       height: 2rem;
       margin: 1rem auto;
@@ -100,13 +100,13 @@ html {
       border: solid rgb(17, 30, 84) 2px;
       background-color: rgb(32, 32, 107);
     }
-    .valider:hover {
+    .validation:hover {
       border: solid rgb(172, 181, 224) 2px;
       background-color: rgb(73, 117, 230);
     }
   }
 
-  .liste {
+  .listing {
     margin: 5rem auto;
     width: 30rem;
     border: solid rgb(17, 30, 84) 2px;
